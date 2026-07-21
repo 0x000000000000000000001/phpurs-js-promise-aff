@@ -1,4 +1,4 @@
-# purescript-js-promise-aff
+# phpurs-js-promise-aff
 
 [![Latest release](http://img.shields.io/github/release/purescript-contrib/purescript-js-promise-aff.svg)](https://github.com/purescript-web/purescript-js-promise-aff/releases)
 [![Build status](https://github.com/purescript-contrib/purescript-js-promise-aff/workflows/CI/badge.svg?branch=master)](https://github.com/purescript-web/purescript-js-promise-aff/actions?query=workflow%3ACI+branch%3Amaster)
