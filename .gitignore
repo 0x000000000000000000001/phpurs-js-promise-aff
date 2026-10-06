@@ -14,3 +14,4 @@ output.bak/
 output
 output.bak
 .psc-ide-port
+/composer-setup.php
