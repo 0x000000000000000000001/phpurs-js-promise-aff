@@ -1,5 +1,7 @@
 # phpurs-js-promise-aff
 
+> PHPurs checkout: see the [PHP library development guide](https://github.com/0x000000000000000000001/phpurs/blob/main/docs/libraries.md) for the TAST toolchain, FFI conventions and validation commands. Run `./bin/test` from this package with the PHP toolchain prepared.
+
 [![Latest release](http://img.shields.io/github/release/purescript-contrib/purescript-js-promise-aff.svg)](https://github.com/purescript-web/purescript-js-promise-aff/releases)
 [![Build status](https://github.com/purescript-contrib/purescript-js-promise-aff/workflows/CI/badge.svg?branch=master)](https://github.com/purescript-web/purescript-js-promise-aff/actions?query=workflow%3ACI+branch%3Amaster)
 [![Pursuit](https://pursuit.purescript.org/packages/purescript-js-promise-aff/badge)](https://pursuit.purescript.org/packages/purescript-js-promise-aff)
@@ -8,6 +10,13 @@ Simple library for interop between Aff and JavaScript promises.
 
 No typeclass instances etc are provided to use Promises directly - the intention is that your PureScript code uses Aff
 internally, and is only wrapped as a Promise to present an API for consumption in JavaScript code (and vice versa).
+
+
+## PHP runtime development
+
+`src/Promise/Aff.purs` composes the Aff and Promise APIs. This package has no PHP FFI implementation of its own: the PHP scheduler and promise runtime come from the sibling `phpurs-aff` and `phpurs-js-promise` packages selected by `spago.php.yaml`.
+
+Run `bin/test` to compile and exercise the conversions on PHP. Keep changes to conversion semantics here, and changes to the underlying runtime in the corresponding sibling package.
 
 ## Exposing promises: Aff to Promise
 
